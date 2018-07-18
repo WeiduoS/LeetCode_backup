@@ -2,21 +2,23 @@ package LeetCode0105_ConstructBinaryTreeFromPreorderAndInorderTraversal;
 
 import java.util.LinkedList;
 import java.util.Queue;
+import java.util.Stack;
 
 public class ConstructBinaryTreeFromPreorderAndInorderTraversal{
 	
 	public static class TreeNode{
-		int data;
+		int val;
 		TreeNode left;
 		TreeNode right;
 		TreeNode (int data){
-			this.data = data;
+			this.val = data;
 		}
 	}
 	
 	static int preIndex = 0;
 	
-	public static TreeNode buildTree(int[] preorder, int[] inorder) {
+	// Recursive Solution
+	public static TreeNode buildTreeRecur(int[] preorder, int[] inorder) {
 		return buildTreeExtend(preorder, inorder, 0, inorder.length - 1);
 	}
 	 /*
@@ -66,7 +68,7 @@ public class ConstructBinaryTreeFromPreorderAndInorderTraversal{
 		int inIndex = 0;
 		
 		for(int i = inStart; i <= inEnd; i++) {
-			if(inorder[i] == node.data) {
+			if(inorder[i] == node.val) {
 				inIndex = i;
 			}
 		}
@@ -76,6 +78,39 @@ public class ConstructBinaryTreeFromPreorderAndInorderTraversal{
 		
 		return node;
 	}
+	// Iterative Solution
+	 public static TreeNode buildTreeIter(int[] preorder, int[] inorder) {
+	        if(preorder.length == 0) return null;
+	        
+	        Stack<TreeNode> stack = new Stack<>();
+	        TreeNode root = new TreeNode(preorder[0]);
+	        TreeNode node = root;
+	        /*
+	         *             0  1   2  3   4
+	         * preorder = [3, 9, 20, 15, 7]
+	         * inorder  = [9, 3, 15, 20, 7]
+	         */
+	        for(int preIndex = 1, inIndex = 0; preIndex < preorder.length; preIndex++){
+	            
+	            if(node.val != inorder[inIndex]){
+	                node.left = new TreeNode(preorder[preIndex]);
+	                stack.push(node);
+	                node = node.left;
+	            }else{
+	                stack.push(node);
+	                while(!stack.isEmpty() && stack.peek().val == inorder[inIndex]){
+	                    node = stack.pop();
+	                    inIndex++;
+	                }
+	                node.right = new TreeNode(preorder[preIndex]);
+	                node = node.right;
+	            }
+	            
+	        }
+	        
+	        return root;
+	    }
+	
 	
 	public static String treeNodeToString(TreeNode root) {
 		if(root == null) {
@@ -93,7 +128,7 @@ public class ConstructBinaryTreeFromPreorderAndInorderTraversal{
 				continue;
 			}
 			
-			output += String.valueOf(node.data) + ", ";
+			output += String.valueOf(node.val) + ", ";
 			nodeQueue.add(node.left);
 			nodeQueue.add(node.right);
 		}
@@ -105,7 +140,10 @@ public class ConstructBinaryTreeFromPreorderAndInorderTraversal{
 	public static void main(String[] args) {
 		int[] preorder = {3,9,20,15,7};
 		int[] inorder = {9,3,15,20,7};
-		
-		System.out.println(treeNodeToString(buildTree(preorder, inorder)));
+		System.out.println("Build Tree from preorder and inorder arrays, Recursive solution will be:");
+		System.out.println(treeNodeToString(buildTreeRecur(preorder, inorder)));
+		System.out.println("");
+		System.out.println("Build Tree from preorder and inorder arrays, Iterative solution will be:");
+		System.out.println(treeNodeToString(buildTreeIter(preorder, inorder)));
 	}
 }
