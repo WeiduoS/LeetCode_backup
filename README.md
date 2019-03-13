@@ -1,1 +1,1 @@
-# LeetCode Java Version
+# LeetCode
