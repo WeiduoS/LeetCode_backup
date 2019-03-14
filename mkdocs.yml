@@ -41,3 +41,10 @@ markdown_extensions:
       guess_lang: false
   - toc:
       permalink: true
+
+# Index
+nav:
+  - Preface: index.md
+  - About: about.md
+  - LeetCode 1 - 100:
+      - 1 Two Sum: LeetCode0001_TwoSum/lc0001.md
