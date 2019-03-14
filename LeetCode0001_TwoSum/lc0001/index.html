@@ -282,7 +282,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../about/" title="About" class="md-nav__link">
+    <a href="../../template/" title="About" class="md-nav__link">
       About
     </a>
   </li>
@@ -346,25 +346,40 @@
     Description
   </a>
   
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
   <a href="#example" title="Example" class="md-nav__link">
     Example
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#java" title="Java" class="md-nav__link">
     Java
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#javascript" title="JavaScript" class="md-nav__link">
+    JavaScript
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c" title="C++" class="md-nav__link">
+    C++
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c_1" title="C" class="md-nav__link">
+    C
+  </a>
   
 </li>
       
@@ -409,25 +424,40 @@
     Description
   </a>
   
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
   <a href="#example" title="Example" class="md-nav__link">
     Example
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#java" title="Java" class="md-nav__link">
     Java
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#javascript" title="JavaScript" class="md-nav__link">
+    JavaScript
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c" title="C++" class="md-nav__link">
+    C++
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c_1" title="C" class="md-nav__link">
+    C
+  </a>
   
 </li>
       
@@ -454,7 +484,7 @@
 <h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">&para;</a></h2>
 <p>Given an array of integers, return indices of the two numbers such that they add up to a specific target.</p>
 <p>You may assume that each input would have exactly one solution, and you may not use the same element twice.</p>
-<h3 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h3>
+<h2 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h2>
 <div class="codehilite"><pre><span></span>Given nums = [2, 7, 11, 15], target = 9,
 
 Because nums[0] + nums[1] = 2 + 7 = 9,
@@ -462,17 +492,121 @@ return [0, 1].
 </pre></div>
 
 
-<h3 id="java">Java<a class="headerlink" href="#java" title="Permanent link">&para;</a></h3>
+<h2 id="java">Java<a class="headerlink" href="#java" title="Permanent link">&para;</a></h2>
 <div class="codehilite"><pre><span></span>public int[] twoSum(int[] nums, int target) {
-        HashMap&lt;Integer, Integer&gt; map = new HashMap&lt;&gt;();
-        for(int i = 0; i &lt; nums.length; i++) {
-            if(map.containsKey(target - nums[i]) &amp;&amp; map.get(target - nums[i]) != i) {
-                return new int[]{map.get(target - nums[i]), i};
-            }
-            map.put(nums[i], i);
+    HashMap&lt;Integer, Integer&gt; map = new HashMap&lt;&gt;();
+    for(int i = 0; i &lt; nums.length; i++) {
+        if(map.containsKey(target - nums[i]) &amp;&amp; map.get(target - nums[i]) != i) {
+            return new int[]{map.get(target - nums[i]), i};
         }
-        return new int[]{};
+        map.put(nums[i], i);
     }
+    return new int[]{};
+}
+</pre></div>
+
+
+<h2 id="javascript">JavaScript<a class="headerlink" href="#javascript" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span>var twoSum = function(nums, target) {
+    var res = [];
+    var map = new Map();
+    for(var i = 0; i &lt; nums.length; i++) {
+        if(map.has(target - nums[i])) {
+            res.push(map.get(target - nums[i]));
+            res.push(i);
+            return res;
+        }
+        map.set(nums[i], i);
+    }
+    return res;
+}
+</pre></div>
+
+
+<h2 id="c">C++<a class="headerlink" href="#c" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span>public:
+    vector&lt;int&gt; twoSum(vector&lt;int&gt;&amp; nums, int target) {
+        unordered_map&lt;int, int&gt; map;
+        for(int i = 0; i &lt; nums.size(); i++) {
+            if(map.count(target - nums[i])) {
+                return {map[target - nums[i]], i};
+            }
+            map[nums[i]] = i;
+        }
+        return {};
+    }
+</pre></div>
+
+
+<h2 id="c_1">C<a class="headerlink" href="#c_1" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span>struct node{
+    int key;
+    int val;
+    int count;
+    struct node* next;
+};
+struct table{
+    int size;
+    struct node** list;
+};
+struct table* createTable(int size) {
+    struct table* t = (struct table*)malloc(sizeof(struct table));
+    t-&gt;size = size;
+    t-&gt;list = (struct node**)malloc(sizeof(struct node*) * size);
+    for(int i = 0; i &lt; size; i++) {
+        t-&gt;list[i] = NULL;
+    }
+    return t;
+}
+int hashCode(struct table *t, int key) {
+    if(key &lt; 0) return -(key % t-&gt;size);
+    return key % t-&gt;size;
+}
+void insert(struct table *t, int key, int val) {
+    int pos = hashCode(t, key);
+    struct node* list = t-&gt;list[pos];
+    struct node* newNode = (struct node*)malloc(sizeof(struct node));
+    struct node* temp = list;
+    while(temp) {
+        if(temp-&gt;key == key){
+            temp-&gt;count = temp-&gt;count + 1;
+            return;
+        }
+        temp = temp-&gt;next;
+    }
+    newNode-&gt;key = key;
+    newNode-&gt;val = val;
+    newNode-&gt;count = 1;
+    newNode-&gt;next = list;
+    t-&gt;list[pos] = newNode;
+    return;
+}
+int search(struct table* t, int key) {
+    int pos = hashCode(t, key);
+    struct node* list = t-&gt;list[pos];
+    struct node* temp = list;
+    while(temp) {
+        if(temp-&gt;key == key) {
+            return temp-&gt;val;
+        }
+        temp = temp-&gt;next;
+    }
+    return -1;
+}
+int* twoSum(int* nums, int numsSize, int target) {
+    int* res = malloc(sizeof(int) * 2);
+    struct table* t = createTable(numsSize);
+    for(int i = 0; i &lt; numsSize; i++) {
+        int pos = search(t, target - nums[i]);
+        if(pos &gt; -1) {
+            res[0] = pos;
+            res[1] = i;
+            return res;
+        }
+        insert(t, nums[i], i);
+    }
+    return res;
+}
 </pre></div>
                 
                   
@@ -494,7 +628,7 @@ return [0, 1].
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../../about/" title="About" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../../template/" title="About" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
