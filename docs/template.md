@@ -1,6 +1,6 @@
 # Project Title
 
-Readme file temple quotes from PurpleBooth Github: (https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
+Readme file temple quotes from PurpleBooth Github: [template](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
 
 ## Getting Started
 
