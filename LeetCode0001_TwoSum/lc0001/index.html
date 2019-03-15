@@ -282,8 +282,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../template/" title="About" class="md-nav__link">
-      About
+    <a href="../../template/" title="Template" class="md-nav__link">
+      Template
     </a>
   </li>
 
@@ -399,6 +399,42 @@
   </li>
 
     
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      LeetCode 301 - 400
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        LeetCode 301 - 400
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../LeetCode0339_EvaluateDivision/lc0339/" title="399 Evaluate Division" class="md-nav__link">
+      399 Evaluate Division
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
   </ul>
 </nav>
                   </div>
@@ -493,120 +529,120 @@ return [0, 1].
 
 
 <h2 id="java">Java<a class="headerlink" href="#java" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span>public int[] twoSum(int[] nums, int target) {
-    HashMap&lt;Integer, Integer&gt; map = new HashMap&lt;&gt;();
-    for(int i = 0; i &lt; nums.length; i++) {
-        if(map.containsKey(target - nums[i]) &amp;&amp; map.get(target - nums[i]) != i) {
-            return new int[]{map.get(target - nums[i]), i};
-        }
-        map.put(nums[i], i);
-    }
-    return new int[]{};
-}
+<div class="codehilite"><pre><span></span><span class="kd">public</span> <span class="kt">int</span><span class="o">[]</span> <span class="nf">twoSum</span><span class="o">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">nums</span><span class="o">,</span> <span class="kt">int</span> <span class="n">target</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">HashMap</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">,</span> <span class="n">Integer</span><span class="o">&gt;</span> <span class="n">map</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashMap</span><span class="o">&lt;&gt;();</span>
+    <span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">nums</span><span class="o">.</span><span class="na">length</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+        <span class="k">if</span><span class="o">(</span><span class="n">map</span><span class="o">.</span><span class="na">containsKey</span><span class="o">(</span><span class="n">target</span> <span class="o">-</span> <span class="n">nums</span><span class="o">[</span><span class="n">i</span><span class="o">])</span> <span class="o">&amp;&amp;</span> <span class="n">map</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">target</span> <span class="o">-</span> <span class="n">nums</span><span class="o">[</span><span class="n">i</span><span class="o">])</span> <span class="o">!=</span> <span class="n">i</span><span class="o">)</span> <span class="o">{</span>
+            <span class="k">return</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[]{</span><span class="n">map</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">target</span> <span class="o">-</span> <span class="n">nums</span><span class="o">[</span><span class="n">i</span><span class="o">]),</span> <span class="n">i</span><span class="o">};</span>
+        <span class="o">}</span>
+        <span class="n">map</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="n">nums</span><span class="o">[</span><span class="n">i</span><span class="o">],</span> <span class="n">i</span><span class="o">);</span>
+    <span class="o">}</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[]{};</span>
+<span class="o">}</span>
 </pre></div>
 
 
 <h2 id="javascript">JavaScript<a class="headerlink" href="#javascript" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span>var twoSum = function(nums, target) {
-    var res = [];
-    var map = new Map();
-    for(var i = 0; i &lt; nums.length; i++) {
-        if(map.has(target - nums[i])) {
-            res.push(map.get(target - nums[i]));
-            res.push(i);
-            return res;
-        }
-        map.set(nums[i], i);
-    }
-    return res;
-}
+<div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">twoSum</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">nums</span><span class="p">,</span> <span class="nx">target</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">res</span> <span class="o">=</span> <span class="p">[];</span>
+    <span class="kd">var</span> <span class="nx">map</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Map</span><span class="p">();</span>
+    <span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">nums</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span><span class="p">(</span><span class="nx">map</span><span class="p">.</span><span class="nx">has</span><span class="p">(</span><span class="nx">target</span> <span class="o">-</span> <span class="nx">nums</span><span class="p">[</span><span class="nx">i</span><span class="p">]))</span> <span class="p">{</span>
+            <span class="nx">res</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">map</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="nx">target</span> <span class="o">-</span> <span class="nx">nums</span><span class="p">[</span><span class="nx">i</span><span class="p">]));</span>
+            <span class="nx">res</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">i</span><span class="p">);</span>
+            <span class="k">return</span> <span class="nx">res</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="nx">map</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="nx">nums</span><span class="p">[</span><span class="nx">i</span><span class="p">],</span> <span class="nx">i</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="nx">res</span><span class="p">;</span>
+<span class="p">}</span>
 </pre></div>
 
 
 <h2 id="c">C++<a class="headerlink" href="#c" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span>public:
-    vector&lt;int&gt; twoSum(vector&lt;int&gt;&amp; nums, int target) {
-        unordered_map&lt;int, int&gt; map;
-        for(int i = 0; i &lt; nums.size(); i++) {
-            if(map.count(target - nums[i])) {
-                return {map[target - nums[i]], i};
-            }
-            map[nums[i]] = i;
-        }
-        return {};
-    }
+<div class="codehilite"><pre><span></span><span class="k">public</span><span class="o">:</span>
+    <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">twoSum</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">nums</span><span class="p">,</span> <span class="kt">int</span> <span class="n">target</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">unordered_map</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span> <span class="kt">int</span><span class="o">&gt;</span> <span class="n">map</span><span class="p">;</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">nums</span><span class="p">.</span><span class="n">size</span><span class="p">();</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">map</span><span class="p">.</span><span class="n">count</span><span class="p">(</span><span class="n">target</span> <span class="o">-</span> <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]))</span> <span class="p">{</span>
+                <span class="k">return</span> <span class="p">{</span><span class="n">map</span><span class="p">[</span><span class="n">target</span> <span class="o">-</span> <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]],</span> <span class="n">i</span><span class="p">};</span>
+            <span class="p">}</span>
+            <span class="n">map</span><span class="p">[</span><span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="p">{};</span>
+    <span class="p">}</span>
 </pre></div>
 
 
 <h2 id="c_1">C<a class="headerlink" href="#c_1" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span>struct node{
-    int key;
-    int val;
-    int count;
-    struct node* next;
-};
-struct table{
-    int size;
-    struct node** list;
-};
-struct table* createTable(int size) {
-    struct table* t = (struct table*)malloc(sizeof(struct table));
-    t-&gt;size = size;
-    t-&gt;list = (struct node**)malloc(sizeof(struct node*) * size);
-    for(int i = 0; i &lt; size; i++) {
-        t-&gt;list[i] = NULL;
-    }
-    return t;
-}
-int hashCode(struct table *t, int key) {
-    if(key &lt; 0) return -(key % t-&gt;size);
-    return key % t-&gt;size;
-}
-void insert(struct table *t, int key, int val) {
-    int pos = hashCode(t, key);
-    struct node* list = t-&gt;list[pos];
-    struct node* newNode = (struct node*)malloc(sizeof(struct node));
-    struct node* temp = list;
-    while(temp) {
-        if(temp-&gt;key == key){
-            temp-&gt;count = temp-&gt;count + 1;
-            return;
-        }
-        temp = temp-&gt;next;
-    }
-    newNode-&gt;key = key;
-    newNode-&gt;val = val;
-    newNode-&gt;count = 1;
-    newNode-&gt;next = list;
-    t-&gt;list[pos] = newNode;
-    return;
-}
-int search(struct table* t, int key) {
-    int pos = hashCode(t, key);
-    struct node* list = t-&gt;list[pos];
-    struct node* temp = list;
-    while(temp) {
-        if(temp-&gt;key == key) {
-            return temp-&gt;val;
-        }
-        temp = temp-&gt;next;
-    }
-    return -1;
-}
-int* twoSum(int* nums, int numsSize, int target) {
-    int* res = malloc(sizeof(int) * 2);
-    struct table* t = createTable(numsSize);
-    for(int i = 0; i &lt; numsSize; i++) {
-        int pos = search(t, target - nums[i]);
-        if(pos &gt; -1) {
-            res[0] = pos;
-            res[1] = i;
-            return res;
-        }
-        insert(t, nums[i], i);
-    }
-    return res;
-}
+<div class="codehilite"><pre><span></span><span class="k">struct</span> <span class="n">node</span><span class="p">{</span>
+    <span class="kt">int</span> <span class="n">key</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">val</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">count</span><span class="p">;</span>
+    <span class="k">struct</span> <span class="n">node</span><span class="o">*</span> <span class="n">next</span><span class="p">;</span>
+<span class="p">};</span>
+<span class="k">struct</span> <span class="n">table</span><span class="p">{</span>
+    <span class="kt">int</span> <span class="n">size</span><span class="p">;</span>
+    <span class="k">struct</span> <span class="n">node</span><span class="o">**</span> <span class="n">list</span><span class="p">;</span>
+<span class="p">};</span>
+<span class="k">struct</span> <span class="n">table</span><span class="o">*</span> <span class="nf">createTable</span><span class="p">(</span><span class="kt">int</span> <span class="n">size</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">struct</span> <span class="n">table</span><span class="o">*</span> <span class="n">t</span> <span class="o">=</span> <span class="p">(</span><span class="k">struct</span> <span class="n">table</span><span class="o">*</span><span class="p">)</span><span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="k">struct</span> <span class="n">table</span><span class="p">));</span>
+    <span class="n">t</span><span class="o">-&gt;</span><span class="n">size</span> <span class="o">=</span> <span class="n">size</span><span class="p">;</span>
+    <span class="n">t</span><span class="o">-&gt;</span><span class="n">list</span> <span class="o">=</span> <span class="p">(</span><span class="k">struct</span> <span class="n">node</span><span class="o">**</span><span class="p">)</span><span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="k">struct</span> <span class="n">node</span><span class="o">*</span><span class="p">)</span> <span class="o">*</span> <span class="n">size</span><span class="p">);</span>
+    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">size</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">t</span><span class="o">-&gt;</span><span class="n">list</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="n">t</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="kt">int</span> <span class="nf">hashCode</span><span class="p">(</span><span class="k">struct</span> <span class="n">table</span> <span class="o">*</span><span class="n">t</span><span class="p">,</span> <span class="kt">int</span> <span class="n">key</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">key</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="k">return</span> <span class="o">-</span><span class="p">(</span><span class="n">key</span> <span class="o">%</span> <span class="n">t</span><span class="o">-&gt;</span><span class="n">size</span><span class="p">);</span>
+    <span class="k">return</span> <span class="n">key</span> <span class="o">%</span> <span class="n">t</span><span class="o">-&gt;</span><span class="n">size</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="kt">void</span> <span class="nf">insert</span><span class="p">(</span><span class="k">struct</span> <span class="n">table</span> <span class="o">*</span><span class="n">t</span><span class="p">,</span> <span class="kt">int</span> <span class="n">key</span><span class="p">,</span> <span class="kt">int</span> <span class="n">val</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kt">int</span> <span class="n">pos</span> <span class="o">=</span> <span class="n">hashCode</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">key</span><span class="p">);</span>
+    <span class="k">struct</span> <span class="n">node</span><span class="o">*</span> <span class="n">list</span> <span class="o">=</span> <span class="n">t</span><span class="o">-&gt;</span><span class="n">list</span><span class="p">[</span><span class="n">pos</span><span class="p">];</span>
+    <span class="k">struct</span> <span class="n">node</span><span class="o">*</span> <span class="n">newNode</span> <span class="o">=</span> <span class="p">(</span><span class="k">struct</span> <span class="n">node</span><span class="o">*</span><span class="p">)</span><span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="k">struct</span> <span class="n">node</span><span class="p">));</span>
+    <span class="k">struct</span> <span class="n">node</span><span class="o">*</span> <span class="n">temp</span> <span class="o">=</span> <span class="n">list</span><span class="p">;</span>
+    <span class="k">while</span><span class="p">(</span><span class="n">temp</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">temp</span><span class="o">-&gt;</span><span class="n">key</span> <span class="o">==</span> <span class="n">key</span><span class="p">){</span>
+            <span class="n">temp</span><span class="o">-&gt;</span><span class="n">count</span> <span class="o">=</span> <span class="n">temp</span><span class="o">-&gt;</span><span class="n">count</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+            <span class="k">return</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="n">temp</span> <span class="o">=</span> <span class="n">temp</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="n">newNode</span><span class="o">-&gt;</span><span class="n">key</span> <span class="o">=</span> <span class="n">key</span><span class="p">;</span>
+    <span class="n">newNode</span><span class="o">-&gt;</span><span class="n">val</span> <span class="o">=</span> <span class="n">val</span><span class="p">;</span>
+    <span class="n">newNode</span><span class="o">-&gt;</span><span class="n">count</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="n">newNode</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">=</span> <span class="n">list</span><span class="p">;</span>
+    <span class="n">t</span><span class="o">-&gt;</span><span class="n">list</span><span class="p">[</span><span class="n">pos</span><span class="p">]</span> <span class="o">=</span> <span class="n">newNode</span><span class="p">;</span>
+    <span class="k">return</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="kt">int</span> <span class="nf">search</span><span class="p">(</span><span class="k">struct</span> <span class="n">table</span><span class="o">*</span> <span class="n">t</span><span class="p">,</span> <span class="kt">int</span> <span class="n">key</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kt">int</span> <span class="n">pos</span> <span class="o">=</span> <span class="n">hashCode</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">key</span><span class="p">);</span>
+    <span class="k">struct</span> <span class="n">node</span><span class="o">*</span> <span class="n">list</span> <span class="o">=</span> <span class="n">t</span><span class="o">-&gt;</span><span class="n">list</span><span class="p">[</span><span class="n">pos</span><span class="p">];</span>
+    <span class="k">struct</span> <span class="n">node</span><span class="o">*</span> <span class="n">temp</span> <span class="o">=</span> <span class="n">list</span><span class="p">;</span>
+    <span class="k">while</span><span class="p">(</span><span class="n">temp</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">temp</span><span class="o">-&gt;</span><span class="n">key</span> <span class="o">==</span> <span class="n">key</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="n">temp</span><span class="o">-&gt;</span><span class="n">val</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="n">temp</span> <span class="o">=</span> <span class="n">temp</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="kt">int</span><span class="o">*</span> <span class="nf">twoSum</span><span class="p">(</span><span class="kt">int</span><span class="o">*</span> <span class="n">nums</span><span class="p">,</span> <span class="kt">int</span> <span class="n">numsSize</span><span class="p">,</span> <span class="kt">int</span> <span class="n">target</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kt">int</span><span class="o">*</span> <span class="n">res</span> <span class="o">=</span> <span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="kt">int</span><span class="p">)</span> <span class="o">*</span> <span class="mi">2</span><span class="p">);</span>
+    <span class="k">struct</span> <span class="n">table</span><span class="o">*</span> <span class="n">t</span> <span class="o">=</span> <span class="n">createTable</span><span class="p">(</span><span class="n">numsSize</span><span class="p">);</span>
+    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">numsSize</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">pos</span> <span class="o">=</span> <span class="n">search</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">target</span> <span class="o">-</span> <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">pos</span> <span class="o">&gt;</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">res</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">pos</span><span class="p">;</span>
+            <span class="n">res</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span>
+            <span class="k">return</span> <span class="n">res</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="n">insert</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">i</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="n">res</span><span class="p">;</span>
+<span class="p">}</span>
 </pre></div>
                 
                   
@@ -628,7 +664,7 @@ int* twoSum(int* nums, int numsSize, int target) {
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../../template/" title="About" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../../template/" title="Template" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -637,11 +673,25 @@ int* twoSum(int* nums, int numsSize, int target) {
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                About
+                Template
               </span>
             </div>
           </a>
         
+        
+          <a href="../../LeetCode0339_EvaluateDivision/lc0339/" title="399 Evaluate Division" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                399 Evaluate Division
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
         
       </nav>
     </div>
