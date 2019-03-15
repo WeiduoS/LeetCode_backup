@@ -52,5 +52,7 @@ nav:
   - Template: template.md
   - LeetCode 1 - 100:
       - 1 Two Sum: LeetCode0001_TwoSum/lc0001.md
+  - LeetCode 201 - 300:
+      - 282 Expression Add Operators: LeetCode0282_ExpressionAddOperators/lc0282.md
   - LeetCode 301 - 400:
       - 399 Evaluate Division: LeetCode0339_EvaluateDivision/lc0339.md
