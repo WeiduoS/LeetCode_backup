@@ -52,6 +52,8 @@ nav:
   - Template: template.md
   - LeetCode 1 - 100:
       - 1 Two Sum: LeetCode0001_TwoSum/lc0001.md
+  - LeetCode 101 - 200:
+      - 101 Symmetric Tree: LeetCode0101_SymmetricTree/lc0101.md
   - LeetCode 201 - 300:
       - 282 Expression Add Operators: LeetCode0282_ExpressionAddOperators/lc0282.md
   - LeetCode 301 - 400:
