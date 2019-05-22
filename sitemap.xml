@@ -2,32 +2,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
      <loc>https://WeiduoS.github.io/LeetCode/</loc>
-     <lastmod>2019-03-16</lastmod>
+     <lastmod>2019-05-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://WeiduoS.github.io/LeetCode/template/</loc>
-     <lastmod>2019-03-16</lastmod>
+     <lastmod>2019-05-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://WeiduoS.github.io/LeetCode/LeetCode0001_TwoSum/lc0001/</loc>
-     <lastmod>2019-03-16</lastmod>
+     <lastmod>2019-05-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://WeiduoS.github.io/LeetCode/LeetCode0101_SymmetricTree/lc0101/</loc>
-     <lastmod>2019-03-16</lastmod>
+     <lastmod>2019-05-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://WeiduoS.github.io/LeetCode/LeetCode0282_ExpressionAddOperators/lc0282/</loc>
-     <lastmod>2019-03-16</lastmod>
+     <lastmod>2019-05-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://WeiduoS.github.io/LeetCode/LeetCode0339_EvaluateDivision/lc0339/</loc>
-     <lastmod>2019-03-16</lastmod>
+     <lastmod>2019-05-21</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://WeiduoS.github.io/LeetCode/LeetCode0416_PartitionEqualSubsetSum/lc0416/</loc>
+     <lastmod>2019-05-21</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://WeiduoS.github.io/LeetCode/DynamicProgramming/01backpack/</loc>
+     <lastmod>2019-05-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>
